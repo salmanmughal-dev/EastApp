@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+  <title>Marks_sheets</title>
+
+
+  <style>
+	body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+#add-row-btn {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+#add-row-btn2 {
+  background-color: crimson; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+#add-row-btn:hover {
+  background-color: #45a049; /* Green with darker shade on hover */
+}
+
+.result-card {
+      background-color: #f5f5f5;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      margin-bottom: 15px;
+      padding: 15px;
+    }
+
+  </style>
+</head>
+<body>
+  <h1 style="margin-bottom: 120px;">Marks Sheet</h1>
+  <div style="display: flex; align-items: center; justify-content: space-between;">
+   
+    <div style="display: flex; align-items: center; justify-content: center;">
+      <img style="border-radius: 50%; width: 170px; height: 170px;" src="https://c8.alamy.com/comp/2J8Y2ND/student-icon-vector-education-line-icon-style-simple-design-illustration-editable-2J8Y2ND.jpg" alt="">
+      <div style="margin-bottom: 30px; margin-left: 40px;">
+        <p>Marks_ID: <%= uuidv4 %></p>
+        <p>Student Name: <%= student.name %></p>
+        <p>Phone: <%= student.phone %></p>
+        <p>Address: <%= student.address %></p>
+        <p>Class: <%= student.class_id %></p>
+    
+    
+      </div>
+    </div>
+  
+    <div style="margin-right: 40px;">
+      <p>Dated: <%= node_date %></p>
+    </div>
+  
+  </div>
+  
+  <table id="marks-table">
+    <thead>
+      <tr style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+        <th>Subject</th>
+        <th>Total Marks</th>
+        <th>Obtained Marks</th>
+        <th>Date</th>
+        <th>Details</th>
+        <!-- <th>Action</th> -->
+      </tr>
+    </thead>
+    <tbody>
+      </tbody>
+  </table>
+
+
+  <button id="add-row-btn">Add Row</button>
+  <button id="add-row-btn2" onclick="printer()">Print</button>
+
+
+
+</body>
+
+
+<script>
+
+
+function printer(){
+  const btn1 = document.getElementById('add-row-btn');
+  btn1.style.display = "none";
+  const btn2 = document.getElementById('add-row-btn2');
+  btn2.style.display = "none";
+  window.print();
+}
+  
+  
+  
+  
+  
+  const table = document.getElementById('marks-table');
+  const addRowBtn = document.getElementById('add-row-btn');
+
+  
+  addRowBtn.addEventListener('click', () => {
+ 
+  
+  
+  // NEW CODE ENDED
+  
+  
+    const newRow = document.createElement('tr');
+    const subjectCell = document.createElement('td');
+    const totalMarksCell = document.createElement('td');
+    const obtainedMarksCell = document.createElement('td');
+    const dateCell = document.createElement('td');
+    const detailsCell = document.createElement('td');
+  //   const actionCell = document.createElement('td');
+  
+    const subjectInput = document.createElement('input');
+    subjectInput.type = 'text';
+    subjectInput.placeholder = 'Enter Subject';
+    subjectInput.style.height = "60px";
+    subjectInput.style.border = "none";
+    subjectCell.appendChild(subjectInput);
+  
+    const totalMarksInput = document.createElement('input');
+    totalMarksInput.type = 'text';
+    totalMarksInput.placeholder = 'Enter Total Marks';
+    totalMarksInput.style.border = "none";
+    totalMarksCell.appendChild(totalMarksInput);
+  
+    const obtainedMarksInput = document.createElement('input');
+    obtainedMarksInput.type = 'text';
+    obtainedMarksInput.placeholder = 'Enter Obtained Marks';
+    obtainedMarksInput.style.border = "none";
+    obtainedMarksCell.appendChild(obtainedMarksInput);
+  
+    const dateInput = document.createElement('input');
+    dateInput.type = 'date';
+    dateInput.style.border = "none";
+
+    dateCell.appendChild(dateInput);
+  
+    const detailsInput = document.createElement('input');
+    detailsInput.placeholder = 'Enter Details';
+    detailsInput.style.border = "none";
+    detailsCell.appendChild(detailsInput);
+
+  
+    const removeBtn = document.createElement('button');
+    removeBtn.textContent = '#';
+    removeBtn.className = 'btn btn-success'
+    removeBtn.addEventListener('click', () => {
+      table.removeChild(newRow);
+    });
+  //   actionCell.appendChild(removeBtn);
+  
+    newRow.appendChild(subjectCell);
+    newRow.appendChild(totalMarksCell);
+    newRow.appendChild(obtainedMarksCell);
+    newRow.appendChild(dateCell);
+    newRow.appendChild(detailsCell);
+  //   newRow.appendChild(actionCell);
+  
+    table.tBodies[0].appendChild(newRow);
+
+  });
+ 
+
+
+  
+  
+  
+    </script>
+
+</html>

@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- SOMETHING CAME WITH CROUSAL BOOTSTRAP 4 -->
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Temp LINKS -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/css/bootstrap-extended.min.css">
+    <link rel="stylesheet" type="text/css" href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/fonts/simple-line-icons/style.min.css">
+    <link rel="stylesheet" type="text/css" href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/css/colors.min.css">
+    <link rel="stylesheet" type="text/css" href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/css/bootstrap.min.css">
+
+
+
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+
+    
+    <!-- <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> -->
+    <!-- CROUSAL ASSOCIASION -->
+
+</head>
+
+    <title>EastApp Dashboard</title>
+
+
+    <style>
+        @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+@media(min-width:768px) {
+    body {
+        margin-top: 50px;
+    }
+    /*html, body, #wrapper, #page-wrapper {height: 100%; overflow: hidden;}*/
+}
+
+/* CROUSAL CSS START */
+
+
+section {
+    padding: 60px 0;
+}
+
+section .section-title {
+    text-align: center;
+    color: #007b5e;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+#team .card {
+    border: none;
+    background: #ffffff;
+}
+
+.image-flip:hover .backside,
+.image-flip.hover .backside {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    border-radius: .25rem;
+}
+
+.image-flip:hover .frontside,
+.image-flip.hover .frontside {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.mainflip {
+    -webkit-transition: 1s;
+    -webkit-transform-style: preserve-3d;
+    -ms-transition: 1s;
+    -moz-transition: 1s;
+    -moz-transform: perspective(1000px);
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transition: 1s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.frontside {
+    position: relative;
+    -webkit-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    z-index: 2;
+    margin-bottom: 30px;
+}
+
+.backside {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: white;
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+    -webkit-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+    -moz-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+    box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+}
+
+.frontside,
+.backside {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: 1s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transition: 1s;
+    -moz-transform-style: preserve-3d;
+    -o-transition: 1s;
+    -o-transform-style: preserve-3d;
+    -ms-transition: 1s;
+    -ms-transform-style: preserve-3d;
+    transition: 1s;
+    transform-style: preserve-3d;
+}
+
+.frontside .card,
+.backside .card {
+    min-height: 312px;
+}
+
+.backside .card a {
+    font-size: 18px;
+    color: #007b5e !important;
+}
+
+.frontside .card .card-title,
+.backside .card .card-title {
+    color: #007b5e !important;
+}
+
+.frontside .card .card-body img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+/* CROUSAL CSS ENDED */
+
+#wrapper {
+    padding-left: 0;    
+}
+
+#page-wrapper {
+    width: 100%;        
+    padding: 0;
+    background-color: #fff;
+}
+
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 225px;
+    }
+
+    #page-wrapper {
+        padding: 22px 10px;
+    }
+}
+
+/* Top Navigation */
+
+.top-nav {
+    padding: 0 15px;
+}
+
+.top-nav>li {
+    display: inline-block;
+    
+
+}
+
+.top-nav>li>a {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    line-height: 20px;
+    color: #fff;
+}
+
+.top-nav>li>a:hover,
+.top-nav>li>a:focus,
+.top-nav>.open>a,
+.top-nav>.open>a:hover,
+.top-nav>.open>a:focus {
+    color: #fff;
+    background-color: #1a242f;
+}
+
+.top-nav>.open>.dropdown-menu {
+    float: left;
+    position: absolute;
+    margin-top: 0;
+    /*border: 1px solid rgba(0,0,0,.15);*/
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    background-color: #fff;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+
+.top-nav>.open>.dropdown-menu>li>a {
+    white-space: normal;
+}
+
+/* Side Navigation */
+
+@media(min-width:768px) {
+    .side-nav {
+        position: fixed;
+        top: 60px;
+        left: 225px;
+        width: 225px;
+        margin-left: -225px;
+        border: none;
+        border-radius: 0;
+        border-top: 1px rgba(0,0,0,.5) solid;
+        overflow-y: auto;
+        background-color: #222;
+        /*background-color: #5A6B7D;*/
+        bottom: 0;
+        overflow-x: hidden;
+        padding-bottom: 40px;
+    }
+
+    .side-nav>li>a {
+        width: 225px;
+        border-bottom: 1px rgba(0,0,0,.3) solid;
+    }
+
+    .side-nav li a:hover,
+    .side-nav li a:focus {
+        outline: none;
+        background-color: #1a242f !important;
+    }
+}
+
+.side-nav>li>ul {
+    padding: 0;
+    border-bottom: 1px rgba(0,0,0,.3) solid;
+}
+
+.side-nav>li>ul>li>a {
+    display: block;
+    padding: 10px 15px 10px 38px;
+    text-decoration: none;
+    /*color: #999;*/
+    color: #fff;    
+}
+
+.side-nav>li>ul>li>a:hover {
+    color: #fff;
+}
+
+.navbar .nav > li > a > .label {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  position: absolute;
+  top: 14px;
+  right: 6px;
+  font-size: 10px;
+  font-weight: normal;
+  min-width: 15px;
+  min-height: 15px;
+  line-height: 1.0em;
+  text-align: center;
+  padding: 2px;
+}
+
+.navbar .nav > li > a:hover > .label {
+  top: 10px;
+}
+
+.navbar-brand {
+    padding: 5px 15px;
+}
+.mt-4{
+    margin-top: 120px;
+}
+
+
+
+
+
+    </style>
+</head>
+<body>
+    
+<div id="throbber" style="display:none; min-height:120px;"></div>
+<div id="noty-holder"></div>
+<div id="wrapper">
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+           
+        </div>
+        <!-- Top Menu Items -->
+        <ul class="nav navbar-right top-nav">
+            <li><a href="#" data-placement="bottom" data-toggle="tooltip" href="#" data-original-title="Stats"><i class="fa fa-bar-chart-o"></i>
+                </a>
+            </li>          
+            <li><a href="/login" data-placement="bottom" data-toggle="tooltip" href="#" data-original-title="Stats">EastApp</i>
+            </a>
+        </li>              
+          
+        </ul>
+        <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav side-nav">
+              
+                <li class="mt-4">
+                  <img style="border-radius: 50%; width: 120px; margin-left: 40px; margin-bottom: 30px;" src="https://t4.ftcdn.net/jpg/04/75/00/99/360_F_475009987_zwsk4c77x3cTpcI3W1C1LU4pOSyPKaqi.jpg" alt="NOT LOADING">
+                  <!-- <img style="border-radius: 50%; width: 120px; margin-left: 40px; margin-bottom: 30px;" src="../assets/my_pic.jpg" alt="NOT LOADING"> -->
+                 
+                    <a href="/register"><i class="fa fa-fw fa-user-plus"></i> Register Student</a>
+
+                </li>
+                <li>
+                    <a href="/fee"><i class="fa-solid fa-wallet"></i>  Fee Management</a>
+                </li>
+                <li>
+                    <a href="/expenses"><i class="fa-solid fa-filter-circle-dollar"></i>  Expenses </a>
+                </li>
+                <li>
+                    <a href="/marks"><i class="fa-solid fa-file-circle-question"></i> Mark_Sheets </a>
+                </li>
+                <li>
+                    <a href="/reports"><i class="fa-solid fa-chart-pie"></i> Reports </a>
+                </li>
+                <li>
+                    <a href="/administration"><i class="fa-solid fa-user-lock"></i> System Administrator </a>
+                </li>
+                <li>
+                    <a href="/login"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout </a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </nav>
+
+    <div id="page-wrapper">
+        <div class="container-fluid">
+            <!-- Page Heading -->
+            <div class="row" id="main" >
+                <div class="col-sm-12 col-md-12 well" id="content">
+                    <h1>Welcome Admin to EastApp!</h1>
+                    <!-- <a style="width: 500px; height: 139px;" href="">SUBMINT</a> -->
+                </div>
+
+                <!-- COPIED CODE FOR CARDS -->
+
+
+                <div class="grey-bg container-fluid">
+                    <section id="minimal-statistics">
+                    
+                    
+                    
+                      <div class="row">
+                        <div class="col-xl-3 col-sm-6 col-12">
+                          <div class="card">
+                            <div class="card-content">
+                              <div class="card-body">
+                                <div class="media d-flex">
+                                  <div class="media-body text-left">
+                                    <h3 class="danger"> <%= node_date %></h3>
+                                    <span>Today</span>
+                                  </div>
+                                  <div class="align-self-center">
+                                    <i class="icon-rocket danger font-large-2 float-right"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div class="col-xl-3 col-sm-6 col-12">
+
+                          <div class="card">
+                            <div class="card-content">
+                              <div class="card-body">
+                                <div class="media d-flex">
+                                  <div class="media-body text-left">
+                                    <h3 class="success"> <%= student_no %></h3>
+                                    <a href="/students" style="text-decoration: none; cursor: pointer; color:  #088F8F;" >Students</span></a>
+                                    
+                                  </div>
+                                  <div class="align-self-center">
+                                    <i class="icon-user success font-large-2 float-right"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    
+                        <div class="col-xl-3 col-sm-6 col-12">
+                          <div class="card">
+                            <div class="card-content">
+                              <div class="card-body">
+                                <div class="media d-flex">
+                                  <div class="media-body text-left">
+                                    <h3 class="warning"><%= balance %> Rupees</h3>
+                                    <span>Balance</span>
+                                  </div>
+                                  <div class="align-self-center">
+                                    <i class="icon-pie-chart warning font-large-2 float-right"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        
+
+                        <div class="col-xl-3 col-sm-6 col-12">
+                          <div class="card">
+                            <div class="card-content">
+                              <div class="card-body">
+                                <div class="media d-flex">
+                                  <div class="media-body text-left">
+                                    <h3 class="primary">04</h3>
+                                    <span>Classes</span>
+                                  </div>
+                                  <div class="align-self-center">
+                                    <i class="icon-support primary font-large-2 float-right"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="row">
+                        <div class="col-xl-3 col-sm-6 col-12">
+                          <div class="card">
+                            <div class="card-content">
+                              <div class="card-body">
+                                <div class="media d-flex">
+                                  <div class="media-body text-left">
+                                    <h3 class="primary"><%= teacher_no %></h3>
+                                    <a href="/staff" style="text-decoration: none; cursor: pointer; color:  #088F8F;" >Staff</span></a>
+                                  </div>
+                                  <div class="align-self-center">
+                                    <i class="icon-book-open primary font-large-2 float-right"></i>
+                                  </div>
+                                </div>
+                                <div class="progress mt-1 mb-0" style="height: 7px;">
+                                  <div class="progress-bar bg-primary" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-xl-3 col-sm-6 col-12">
+                          <div class="card">
+                            <div class="card-content">
+                              <div class="card-body">
+                                <div class="media d-flex">
+                                  <div class="media-body text-left">
+                                    <h3 class="warning">156</h3>
+                                    <span>Diaries & Notes</span>
+                                  </div>
+                                  <div class="align-self-center">
+                                    <i class="icon-bubbles warning font-large-2 float-right"></i>
+                                  </div>
+                                </div>
+                                <div class="progress mt-1 mb-0" style="height: 7px;">
+                                  <div class="progress-bar bg-warning" role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    
+                        <div class="col-xl-3 col-sm-6 col-12">
+                          <div class="card">
+                            <div class="card-content">
+                              <div class="card-body">
+                                <div class="media d-flex">
+                                  <div class="media-body text-left">
+                                    <h3 class="success">64.89 %</h3>
+                                    <span>Papers</span>
+                                  </div>
+                                  <div class="align-self-center">
+                                    <i class="icon-cup success font-large-2 float-right"></i>
+                                  </div>
+                                </div>
+                                <div class="progress mt-1 mb-0" style="height: 7px;">
+                                  <div class="progress-bar bg-success" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-xl-3 col-sm-6 col-12">
+                          <div class="card">
+                            <div class="card-content">
+                              <div class="card-body">
+                                <div class="media d-flex">
+                                  <div class="media-body text-left">
+                                    <h3 class="danger">12</h3>
+                                    <span>EAST Noticeboard</span>
+                                  </div>
+                                  <div class="align-self-center">
+                                    <i class="icon-direction danger font-large-2 float-right"></i>
+                                  </div>
+                                </div>
+                                <div class="progress mt-1 mb-0" style="height: 7px;">
+                                  <div class="progress-bar bg-danger" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+
+
+                    <!-- BOOTSTRAP CARD CAME ALONG -->
+                    
+
+                    <!-- Team -->
+<section id="team" class="pb-5">
+  <div class="container">
+      <h5 class="section-title h1">Recent Admissions</h5>
+      <div class="row">
+          <!-- Team member -->
+          <div class="col-xs-12 col-sm-6 col-md-4">
+              <div class="image-flip" >
+                  <div class="mainflip flip-0">
+                      <div class="frontside">
+                          <div class="card">
+                              <div class="card-body text-center">
+                                  <p><img class=" img-fluid" src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/logo-design-template-35b0a3e2315d19a46c046165f315b000_screen.jpg?ts=1592240511" alt="card image"></p>
+                                  <h4 class="card-title"><%= name1 %> 
+</h4>
+                                  <p class="card-text">Date of Admission: <%= Date_of_Reg1 %></p>
+                                  <p class="card-text">Class: <%= class1 %> </p>
+
+                                  <!-- <a href="#"><i class="fa fa-plus"></i></a> -->
+                              </div>
+                          </div>
+                      </div>
+                      <div class="backside">
+                          <div class="card">
+                              <div class="card-body text-center mt-4">
+                                  <h4 class="card-title"><%= name1 %></h4>
+                                  <p class="card-text">Date of Admission: <%= Date_of_Reg1 %> </p>
+                                  <p class="card-text">Class: <%= class1 %> </p>
+
+                                  <ul class="list-inline">
+                                      <li class="list-inline-item">
+                                          <a class="social-icon text-xs-center" target="_blank" href="#">
+                                              <i class="fa fa-facebook"></i>
+                                          </a>
+                                      </li>
+                                      <li class="list-inline-item">
+                                          <a class="social-icon text-xs-center" target="_blank" href="#">
+                                              <i class="fa fa-twitter"></i>
+                                          </a>
+                                      </li>
+                                      <li class="list-inline-item">
+                                          <a class="social-icon text-xs-center" target="_blank" href="#">
+                                              <i class="fa fa-skype"></i>
+                                          </a>
+                                      </li>
+                                      <li class="list-inline-item">
+                                          <a class="social-icon text-xs-center" target="_blank" href="#">
+                                              <i class="fa fa-google"></i>
+                                          </a>
+                                      </li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!-- ./Team member -->
+          <!-- Team member -->
+          <div class="col-xs-12 col-sm-6 col-md-4">
+              <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                  <div class="mainflip">
+                      <div class="frontside">
+                          <div class="card">
+                              <div class="card-body text-center">
+                                  <p><img class=" img-fluid" src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/logo-design-template-35b0a3e2315d19a46c046165f315b000_screen.jpg?ts=1592240511" alt="card image"></p>
+                                  <h4 class="card-title"><%= name3 %> 
+</h4>
+                                  <p class="card-text">Date of Admission: <%= Date_of_Reg3 %></p>
+                                  <p class="card-text">Class: <%= class_name3 %></p>
+
+                                  <!-- <a href="https://www" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a> -->
+                              </div>
+                          </div>
+                      </div>
+                      <div class="backside">
+                          <div class="card">
+                              <div class="card-body text-center mt-4">
+                                  <h4 class="card-title"><%= name3 %></h4>
+                                  <p class="card-text"> Date of Admission: <%= Date_of_Reg3 %> <br> Class: <%= class_name3 %> </p>
+                                  <ul class="list-inline">
+                                      <li class="list-inline-item">
+                                           <a class="social-icon text-xs-center" target="_blank" href="#">
+                                              <i class="fa fa-facebook"></i>
+                                          </a>
+                                      </li>
+                                      <li class="list-inline-item">
+                                           <a class="social-icon text-xs-center" target="_blank" href="#">
+                                              <i class="fa fa-twitter"></i>
+                                          </a>
+                                      </li>
+                                      <li class="list-inline-item">
+                                          <a class="social-icon text-xs-center" target="_blank" href="#">
+                                              <i class="fa fa-skype"></i>
+                                          </a>
+                                      </li>
+                                      <li class="list-inline-item">
+                                           <a class="social-icon text-xs-center" target="_blank" href="#">
+                                              <i class="fa fa-google"></i>
+                                          </a>
+                                      </li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!-- ./Team member -->
+          <!-- Team member -->
+          <div class="col-xs-12 col-sm-6 col-md-4">
+              <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                  <div class="mainflip">
+                      <div class="frontside">
+                          <div class="card">
+                              <div class="card-body text-center">
+                                  <p><img class=" img-fluid" src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/logo-design-template-35b0a3e2315d19a46c046165f315b000_screen.jpg?ts=1592240511" alt="card image"></p>
+                                  <h4 class="card-title"><%= name2%> 
+</h4>
+                                  <p class="card-text">Date of Admission: <%= Date_of_Reg2 %> <br> Class: <%= class_name2 %></p>
+                                  <!-- <a href="https://www" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a> -->
+                              </div>
+                          </div>
+                      </div>
+                      <div class="backside">
+                          <div class="card">
+                              <div class="card-body text-center mt-4">
+                                  <h4 class="card-title"><%= name2 %></h4>
+                                  <p class="card-text">Date of Admission: <%= Date_of_Reg2 %>  <br> Class: <%= class_name2 %></p>
+                                  <ul class="list-inline">
+                                      <li class="list-inline-item">
+                                          <a class="social-icon text-xs-center" target="_blank" href="#">
+                                              <i class="fa fa-facebook"></i>
+                                          </a>
+                                      </li>
+                                      <li class="list-inline-item">
+                                          <a class="social-icon text-xs-center" target="_blank" href="#">
+                                              <i class="fa fa-twitter"></i>
+                                          </a>
+                                      </li>
+                                      <li class="list-inline-item">
+                                          <a class="social-icon text-xs-center" target="_blank" href="#">
+                                              <i class="fa fa-skype"></i>
+                                          </a>
+                                      </li>
+                                      <li class="list-inline-item">
+                                          <a class="social-icon text-xs-center" target="_blank" href="#">
+                                              <i class="fa fa-google"></i>
+                                          </a>
+                                      </li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!-- ./Team member -->
+        
+       
+          <!-- Team member -->
+         
+
+      </div>
+  </div>
+</section>
+<!-- Team -->
+
+               <!-- CARD ENDED -->
+                  </div>
+
+
+
+
+
+
+
+
+
+                <!-- COPIED ENDED -->
+                <!-- <a style="width: 150px; height: 120px; background-color: crimson;" href="">SUBMINT</a> -->
+
+
+            </div>
+            <!-- /.row -->
+        </div>
+        
+
+
+        
+    </div>
+    <!-- /#page-wrapper -->
+
+
+    
+</div>
+
+
+
+
+<!-- /#wrapper -->
+<!-- <a class="myanchor" style="background-color: crimson; width: 100px; height: 850px;" href="">SUBMINT</a> -->
+
+</body>
+</html>
+

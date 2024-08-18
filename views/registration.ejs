@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js" integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Document</title>
+
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"> -->
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"> -->
+    <style>
+        @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+@media(min-width:768px) {
+    body {
+        margin-top: 50px;
+    }
+    /*html, body, #wrapper, #page-wrapper {height: 100%; overflow: hidden;}*/
+}
+
+#wrapper {
+    padding-left: 0;    
+}
+
+#page-wrapper {
+    width: 100%;        
+    padding: 0;
+    background-color: #fff;
+}
+
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 225px;
+    }
+
+    #page-wrapper {
+        padding: 22px 10px;
+    }
+}
+
+/* Top Navigation */
+
+.top-nav {
+    padding: 0 15px;
+}
+
+.top-nav>li {
+    display: inline-block;
+    
+
+}
+
+.top-nav>li>a {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    line-height: 20px;
+    color: #fff;
+}
+
+.top-nav>li>a:hover,
+.top-nav>li>a:focus,
+.top-nav>.open>a,
+.top-nav>.open>a:hover,
+.top-nav>.open>a:focus {
+    color: #fff;
+    background-color: #1a242f;
+}
+
+.top-nav>.open>.dropdown-menu {
+    float: left;
+    position: absolute;
+    margin-top: 0;
+    /*border: 1px solid rgba(0,0,0,.15);*/
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    background-color: #fff;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+
+.top-nav>.open>.dropdown-menu>li>a {
+    white-space: normal;
+}
+
+/* Side Navigation */
+
+@media(min-width:768px) {
+    .side-nav {
+        position: fixed;
+        top: 60px;
+        left: 225px;
+        width: 225px;
+        margin-left: -225px;
+        border: none;
+        border-radius: 0;
+        border-top: 1px rgba(0,0,0,.5) solid;
+        overflow-y: auto;
+        background-color: #222;
+        /*background-color: #5A6B7D;*/
+        bottom: 0;
+        overflow-x: hidden;
+        padding-bottom: 40px;
+    }
+
+    .side-nav>li>a {
+        width: 225px;
+        border-bottom: 1px rgba(0,0,0,.3) solid;
+    }
+
+    .side-nav li a:hover,
+    .side-nav li a:focus {
+        outline: none;
+        background-color: #1a242f !important;
+    }
+}
+
+.side-nav>li>ul {
+    padding: 0;
+    border-bottom: 1px rgba(0,0,0,.3) solid;
+}
+
+.side-nav>li>ul>li>a {
+    display: block;
+    padding: 10px 15px 10px 38px;
+    text-decoration: none;
+    /*color: #999;*/
+    color: #fff;    
+}
+
+.side-nav>li>ul>li>a:hover {
+    color: #fff;
+}
+
+.navbar .nav > li > a > .label {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  position: absolute;
+  top: 14px;
+  right: 6px;
+  font-size: 10px;
+  font-weight: normal;
+  min-width: 15px;
+  min-height: 15px;
+  line-height: 1.0em;
+  text-align: center;
+  padding: 2px;
+}
+
+.navbar .nav > li > a:hover > .label {
+  top: 10px;
+}
+
+.navbar-brand {
+    padding: 5px 15px;
+}
+.mt-4{
+    margin-top: 60px;
+}
+.myclass2{
+    margin-left: 230px;;
+}
+.mb-4{
+  margin-bottom: 20px;
+}
+
+/* THe copied css */
+
+/* .gradient-custom { */
+/* fallback for old browsers */
+/* background: rebeccapurple; */
+
+/* Chrome 10-25, Safari 5.1-6 */
+/* background: -webkit-linear-gradient(to bottom right, rgba(240, 147, 251, 1), rgba(245, 87, 108, 1)); */
+
+/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+/* background: linear-gradient(to bottom right, rgba(240, 147, 251, 1), rgba(245, 87, 108, 1)) */
+/* } */
+
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+font-size: 1rem;
+line-height: 2.15;
+padding-left: .75em;
+padding-right: .75em;
+}
+.card-registration .select-arrow {
+top: 13px;
+}
+    </style>
+</head>
+<body>
+    
+<div id="throbber" style="display:none; min-height:120px;"></div>
+<div id="noty-holder"></div>
+<div id="wrapper">
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        
+        </div>
+        <!-- Top Menu Items -->
+        <ul class="nav navbar-right top-nav">
+            <li><a href="#" data-placement="bottom" data-toggle="tooltip" href="#" data-original-title="Stats"><i class="fa fa-bar-chart-o"></i>
+                </a>
+            </li>          
+            <li><a href="/login" data-placement="bottom" data-toggle="tooltip" href="#" data-original-title="Stats">EastApp</i>
+            </a>
+        </li>              
+          
+        </ul>
+        <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav side-nav">
+              
+                <li style="background-color: #b0b326; color: black;" class="mt-4">
+                    <a style="color: black;" href="/register"><i class="fa fa-fw fa-user-plus"></i> Register Student</a>
+                </li>
+                <li>
+                    <a href="sugerencias"><i class="fa-solid fa-wallet"></i>  Fee Management</a>
+                </li>
+                <li>
+                    <a href="faq"><i class="fa-solid fa-filter-circle-dollar"></i>  Expenses </a>
+                </li>
+                <li>
+                    <a href="faq"><i class="fa-solid fa-file-circle-question"></i> Mark_Sheets </a>
+                </li>
+                <li>
+                    <a href="faq"><i class="fa-solid fa-chart-pie"></i> Reports </a>
+                </li>
+                <li>
+                    <a href="faq"><i class="fa-solid fa-user-lock"></i> System Administrator </a>
+                </li>
+                <li>
+                    <a href="faq"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout </a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </nav>
+
+    <div id="page-wrapper">
+        <div class="container-fluid">
+            <!-- Page Heading -->
+            <div class="row mt-4" id="main" >
+                <!-- <div class="col-sm-12 col-md-12 well" id="content"> -->
+                 
+                        <!-- Copied Registration -->
+                        
+                        <section class="vh-100 gradient-custom">
+                          <div class="container py-5 h-100">
+                            <div class="row justify-content-center align-items-center h-100">
+                              <div class="col-12 col-lg-9 col-xl-7">
+                                <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+                                  <div class="card-body p-4 p-md-5">
+                                 
+                                    <form action="/register" method="POST">
+                                      <div style="display: flex; align-items: center; justify-content: space-between;">
+                                        <iframe class="mb-4" src="https://giphy.com/embed/26gJALSQePoSDW5Hy" width="300" height="200" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/google-vote-voter-registration-26gJALSQePoSDW5Hy"></a></p>
+                                      </div>
+                                      
+                                      <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Registration Form</h3>
+                                      
+                                      <div class="row">
+                                        <div class="col-md-6 mb-4">
+                          
+                                            <div class="form-outline">
+                                              <input type="text" id="firstName" required name="name" class="form-control form-control-lg" />
+                                              <label class="form-label"  for="firstName">Full Name</label>
+                                            </div>
+                          
+                                          </div>
+                                          <div class="col-md-6 mb-4">
+                          
+                                            <div class="form-outline">
+                                              <input type="text" id="lastName" required name="address" class="form-control form-control-lg" />
+                                              <label class="form-label" for="lastName">Address</label>
+                                            </div>
+
+                                            <!-- <div class="form-outline">
+                                                <input type="text" class="form-control form-control-lg" />
+                                                <label class="form-label" for="lastName">Class</label>
+                                              </div> -->
+                          
+                                          </div>
+                                        </div>
+                          
+                                        <div class="row">
+                                          <div class="col-md-6 mb-4 d-flex align-items-center">
+                          
+                                            <div class="form-outline datepicker w-100">
+                                              <input type="text" required class="form-control form-control-lg" name="phone" id="birthdayDate" />
+                                              <label for="birthdayDate" class="form-label">Phone</label>
+                                            </div>
+
+                                            <div class="form-outline datepicker w-100">
+                                              <input type="number" class="form-control form-control-lg" name="fee" id="birthdayDate" />
+                                              <label for="birthdayDate" class="form-label">Fee Amount</label>
+                                            </div>
+
+
+                                           <!-- DROPDOWN -->
+                                       
+                                           <div class="col-12">
+                          
+                                            <select name="class_name" class="select form-control-lg">
+                                              <option value="1" disabled>Class</option>
+                                              <option value="4">9th</option>
+                                              <option value="1">10th</option>
+                                              <option value="2">11th</option>
+                                              <option value="3">12th</option>
+
+                                            </select>
+
+                                            <label class="form-label select-label">Type</label>
+                          
+                                          </div>
+
+                                           <!-- DROPDOWN ENDED -->
+                          
+                                          </div>
+                                          <div class="col-md-6 mb-4">
+                          
+                                            <h4 class="mb-2 pb-1 text-lg"> Gender: </h4>
+                          
+                                            <div class="form-check form-check-inline">
+                                              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="femaleGender"
+                                                value="Female" checked />
+                                              <label class="form-check-label" for="femaleGender">Female</label>
+                                            </div>
+                          
+                                            <div class="form-check form-check-inline">
+                                              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="maleGender"
+                                                value="Male" />
+                                              <label class="form-check-label" for="maleGender">Male</label>
+                                            </div>
+                          
+        
+                          
+                                          </div>
+                                        </div>
+                          
+                                       
+                                        </div>
+                          
+                                        <div class="row myclass2">
+                                          <div class="col-12">
+                          
+                                            <select name="type" class="select form-control-lg">
+                                              <option value="1" disabled>type</option>
+                                              <option value="academy">Academy</option>
+                                              <option value="school">School</option>
+                                              <option disabled value="other">Other</option>
+
+                                            </select>
+
+                                            <label class="form-label select-label">Type</label>
+                          
+                                          </div>
+                                        </div>
+                          
+                                        <div style="display: flex; gap: 60px;" class="mt-4 pt-2 myclass2">
+                                          <input style="color: white; width: 120px; height: 40px; background-color: #b0b326;" class="btn" type="submit" value="Submit" />
+                                          <a type="button" style="width: 120px; padding-top: 10px; background-color: #b0b326; color: white;" class="text-white btn text-center" href="/register/register_back">Back</a>
+                                        </div>
+                          
+                                      </form>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </section>
+
+                          <!-- ENDED -->
+
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+    </div>
+    <!-- /#page-wrapper -->
+</div>
+<!-- /#wrapper -->
+
+
+
+</body>
+</html>
+
