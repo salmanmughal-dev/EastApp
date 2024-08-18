@@ -1,55 +1,20 @@
 # EastApp
 
-[Project Name]
+A School & Academy System
 
-This is a README file for the Node.js project: [Project Name].
+This is a system which manages the fee, registration of staff, students and reporting in a school and academy environment.
 
 Table of Contents
 
-    Project Description
-    Installation
-    Usage
-    Contributing
-    License   
+    The Description.
+    A Brief Note
+    
+   
 
 Project Description  
 
-<-- Briefly describe what your project does and its purpose. -->
+This Software solution was developed using EJS as templating engine and nodejs with MySQL database. The database schema and the data to test the application have been compressed to a file in "Database" folder. It supports PDF generation of reports for students fee, registration and has a dashboard where user can look a summarized overview of the activites.
 
-Installation
+A Brief Note
 
-    Clone this repository:
-
-Bash
-
-git clone https://github.com/your-username/[project-name].git
-
-Use code with caution.
-
-    Navigate to the project directory:   
-
-Bash
-
-cd [project-name]
-
-Use code with caution.
-
-    Install dependencies:
-
-Bash
-
-npm install
-
-Use code with caution.
-
-Usage
-
-<-- Explain how to use your project. Include commands, arguments, and any configuration details. -->  
-
-Contributing
-
-We welcome contributions! Please see the CONTRIBUTING.md file for details on how to submit pull requests.
-
-License
-
-This project is licensed under the [License Name] license. See the LICENSE file for details.
+Please note that this system was designed and developed back then in 2023 when I was just starting to write Node code so it does not follow best practices. This was mainly for learning about dynamic html code generation from backend and interacting with database from node code.
